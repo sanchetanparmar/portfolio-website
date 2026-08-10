@@ -1,6 +1,6 @@
 # Sanjay Parmar
 
-**Cloud / DevOps Engineer · SRE**
+**Cloud / DevOps Engineer · SRE** 
 
 India · open to remote · full-time / contract / consulting
 
