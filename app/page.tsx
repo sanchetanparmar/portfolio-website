@@ -6,7 +6,6 @@ import {
   Award,
   Briefcase,
   Cloud,
-  Code2,
   Container,
   Database,
   FolderKanban,
@@ -21,7 +20,8 @@ import {
   Terminal,
 } from 'lucide-react'
 
-import { ThemeToggle } from '@/components/theme-toggle'
+import { SiteHeader } from '@/components/site-header'
+import { HeroSkillsAnimation } from '@/components/hero-skills-animation'
 
 function LinkedInIcon({ className }: { className?: string }) {
   return (
@@ -54,7 +54,7 @@ const skillGroups = [
 const experience = [
   {
     role: 'Lead DevOps Engineer',
-    period: 'Jan 2024 – Present',
+    period: '2023 – Present',
     highlights: [
       'Lead end-to-end DevOps strategy for an InsurTech platform spanning cloud infrastructure, CI/CD, and production support.',
       'Architected serverless AWS workflows with Lambda, Step Functions, and API Gateway to speed delivery and cut operational overhead.',
@@ -65,7 +65,7 @@ const experience = [
   },
   {
     role: 'DevOps / SRE / Cloud Architect',
-    period: 'Oct 2018 – Dec 2023',
+    period: '2018 – 2022',
     highlights: [
       'Designed enterprise AWS infrastructure for FinTech platforms supporting 100k+ concurrent connections.',
       'Built DevOps and SRE practices from scratch while delivering PCI-DSS and SOC 2 compliance.',
@@ -76,7 +76,7 @@ const experience = [
   },
   {
     role: 'DevSecOps Engineer',
-    period: 'Mar 2018 – Sep 2018',
+    period: '2018',
     highlights: [
       'Implemented centralized authentication with FreeIPA / Red Hat IDM integrated into Git and Jenkins.',
       'Delivered CIS benchmark hardening and SIEM coverage on AWS.',
@@ -191,104 +191,60 @@ function Tag({ children }: { children: string }) {
 export default function Page() {
   return (
     <main className="min-h-screen overflow-hidden bg-background">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10" aria-label="Primary navigation">
-        <a href="#top" className="font-mono text-sm font-semibold tracking-tight text-foreground">
-          <span className="text-primary">./</span> SP
-        </a>
-        <div className="flex items-center gap-4 md:gap-8">
-          <div className="hidden items-center gap-8 font-mono text-xs text-muted-foreground md:flex">
-            <a className="transition-colors hover:text-primary" href="#experience">
-              experience
-            </a>
-            <a className="transition-colors hover:text-primary" href="#skills">
-              skills
-            </a>
-            <a className="transition-colors hover:text-primary" href="#projects">
-              projects
-            </a>
-            <a className="transition-colors hover:text-primary" href="#certifications">
-              certifications
-            </a>
-            <a className="transition-colors hover:text-primary" href="#contact">
-              contact
-            </a>
-          </div>
-          <ThemeToggle />
-        </div>
-      </nav>
+      <SiteHeader active="home" />
 
       <section id="top" className="relative mx-auto max-w-7xl px-6 pb-24 pt-20 lg:px-10 lg:pb-32 lg:pt-28">
-        <div className="pointer-events-none absolute -right-20 top-10 hidden font-mono text-[11px] leading-6 text-foreground/35 lg:block dark:text-primary/45" aria-hidden="true">
-          <p>deploy --production</p>
-          <p>provision --cloud=multi</p>
-          <p>observe --everything</p>
-          <p className="text-accent/70 dark:text-accent/50">status: operational_</p>
-        </div>
-        <div className="max-w-4xl">
-          <p className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.24em] text-primary">
-            <span className="h-px w-8 bg-primary" /> cloud infrastructure / engineering
-          </p>
-          <h1 className="max-w-4xl text-balance text-5xl font-semibold leading-[1.04] tracking-[-0.05em] text-foreground md:text-7xl lg:text-8xl">
-            Sanjay
-            <br />
-            <span className="text-primary">Parmar.</span>
-          </h1>
-          <p className="mt-8 max-w-2xl font-mono text-sm leading-7 text-muted-foreground md:text-base">
-            Cloud / DevOps Engineer · SRE
-          </p>
-          <p className="mt-5 max-w-xl text-pretty text-base leading-7 text-muted-foreground">
-            Designing resilient cloud platforms, automating delivery, and making complex infrastructure feel simple.
-          </p>
-          <div className="mt-5 flex flex-wrap items-center gap-4 font-mono text-xs text-muted-foreground">
-            <span className="inline-flex items-center gap-2">
-              <MapPin className="size-3.5 text-primary" /> India · open to remote
-            </span>
-            <span className="text-border">|</span>
-            <span>Full-time · contract · consulting</span>
-          </div>
-          <div className="mt-9 flex flex-wrap items-center gap-4">
-            <a
-              href="mailto:sanchetanparmar@yahoo.com"
-              className="group inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-transform hover:-translate-y-0.5"
-            >
-              Start a conversation{' '}
-              <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/sanjayp5/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 font-mono text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary"
-            >
-              <LinkedInIcon className="size-3.5" /> LinkedIn
-            </a>
-            <a
-              href="https://github.com/sanchetanparmar"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 font-mono text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary"
-            >
-              <GitHubIcon className="size-3.5" /> GitHub
-            </a>
-            <a
-              href="#experience"
-              className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 font-mono text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary"
-            >
-              View experience <span aria-hidden="true">↓</span>
-            </a>
-          </div>
-        </div>
-        <div className="mt-20 grid max-w-3xl grid-cols-3 border-y border-border py-5">
-          {[
-            ['10+', 'years in engineering'],
-            ['03', 'cloud ecosystems'],
-            ['40%+', 'faster incident detection'],
-          ].map(([value, label]) => (
-            <div key={label} className="border-r border-border px-4 first:pl-0 last:border-0">
-              <p className="font-mono text-xl text-foreground md:text-2xl">{value}</p>
-              <p className="mt-1 text-[11px] leading-4 text-muted-foreground">{label}</p>
+        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
+          <div className="max-w-4xl">
+            <p className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.24em] text-primary">
+              <span className="h-px w-8 bg-primary" /> cloud infrastructure / engineering
+            </p>
+            <h1 className="max-w-4xl text-balance text-5xl font-semibold leading-[1.04] tracking-[-0.05em] text-foreground md:text-7xl lg:text-8xl">
+              Sanjay
+              <br />
+              <span className="text-primary">Parmar.</span>
+            </h1>
+            <p className="mt-8 max-w-2xl font-mono text-sm leading-7 text-muted-foreground md:text-base">
+              Cloud / DevOps Engineer · SRE
+            </p>
+            <p className="mt-5 max-w-xl text-pretty text-base leading-7 text-muted-foreground">
+              Designing resilient cloud platforms, automating delivery, and making complex infrastructure feel simple.
+            </p>
+            <div className="mt-5 flex flex-wrap items-center gap-4 font-mono text-xs text-muted-foreground">
+              <span className="inline-flex items-center gap-2">
+                <MapPin className="size-3.5 text-primary" /> India · open to remote
+              </span>
+              <span className="text-border">|</span>
+              <span>Full-time · contract · consulting</span>
             </div>
-          ))}
+            <div className="mt-9 flex flex-wrap items-center gap-4">
+              <a
+                href="mailto:sanchetanparmar@yahoo.com"
+                className="group inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-transform hover:-translate-y-0.5"
+              >
+                Start a conversation{' '}
+                <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/sanjayp5/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 font-mono text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary"
+              >
+                <LinkedInIcon className="size-3.5" /> LinkedIn
+              </a>
+              <a
+                href="https://github.com/sanchetanparmar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 font-mono text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary"
+              >
+                <GitHubIcon className="size-3.5" /> GitHub
+              </a>
+            </div>
+          </div>
+
+          <HeroSkillsAnimation />
         </div>
       </section>
 
@@ -445,18 +401,11 @@ export default function Page() {
 
       <section id="education" className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
         <SectionHeading eyebrow="foundation" title="Education & beyond" />
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           <div className="rounded-lg border border-border bg-card/40 p-6">
             <GraduationCap className="mb-8 size-5 text-primary" />
-            <p className="font-mono text-xs text-muted-foreground">postgraduate</p>
+            <p className="font-mono text-xs text-muted-foreground">education</p>
             <h3 className="mt-2 text-xl text-foreground">Master of Computer Applications</h3>
-            <p className="mt-2 text-sm text-muted-foreground">JNU, Jaipur</p>
-          </div>
-          <div className="rounded-lg border border-border bg-card/40 p-6">
-            <Code2 className="mb-8 size-5 text-primary" />
-            <p className="font-mono text-xs text-muted-foreground">undergraduate</p>
-            <h3 className="mt-2 text-xl text-foreground">Bachelor of Computer Applications</h3>
-            <p className="mt-2 text-sm text-muted-foreground">IGNOU</p>
           </div>
           <div className="rounded-lg border border-border bg-card/40 p-6">
             <Network className="mb-8 size-5 text-accent" />
@@ -487,7 +436,7 @@ export default function Page() {
               href="mailto:sanchetanparmar@yahoo.com"
               className="inline-flex items-center gap-3 text-sm text-foreground transition-colors hover:text-primary"
             >
-              <Mail className="size-4 text-primary" /> sanchetanparmar@yahoo.com
+              <Mail className="size-4 text-primary" /> Email
             </a>
             <a
               href="https://www.linkedin.com/in/sanjayp5/"
@@ -495,7 +444,7 @@ export default function Page() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 text-sm text-foreground transition-colors hover:text-primary"
             >
-              <LinkedInIcon className="size-4 text-primary" /> linkedin.com/in/sanjayp5
+              <LinkedInIcon className="size-4 text-primary" /> LinkedIn
             </a>
             <a
               href="https://github.com/sanchetanparmar"
@@ -503,7 +452,7 @@ export default function Page() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 text-sm text-foreground transition-colors hover:text-primary"
             >
-              <GitHubIcon className="size-4 text-primary" /> github.com/sanchetanparmar
+              <GitHubIcon className="size-4 text-primary" /> GitHub
             </a>
             <p className="font-mono text-[10px] text-muted-foreground">© 2026 Sanjay Parmar · engineered for resilience</p>
           </div>

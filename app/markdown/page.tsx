@@ -16,7 +16,7 @@ const toc = [
 const experience = [
   {
     title: 'Lead DevOps Engineer',
-    period: 'Jan 2024 – Present',
+    period: '2023 – Present',
     bullets: [
       'Lead end-to-end DevOps strategy for an InsurTech platform spanning cloud infrastructure, CI/CD, and production support.',
       'Architected serverless AWS workflows with Lambda, Step Functions, and API Gateway to speed delivery and cut operational overhead.',
@@ -27,7 +27,7 @@ const experience = [
   },
   {
     title: 'DevOps / SRE / Cloud Architect',
-    period: 'Oct 2018 – Dec 2023',
+    period: '2018 – 2022',
     bullets: [
       'Designed enterprise AWS infrastructure for FinTech platforms supporting 100k+ concurrent connections.',
       'Built DevOps and SRE practices from scratch while delivering PCI-DSS and SOC 2 compliance.',
@@ -38,7 +38,7 @@ const experience = [
   },
   {
     title: 'DevSecOps Engineer',
-    period: 'Mar 2018 – Sep 2018',
+    period: '2018',
     bullets: [
       'Implemented centralized authentication with FreeIPA / Red Hat IDM integrated into Git and Jenkins.',
       'Delivered CIS benchmark hardening and SIEM coverage on AWS.',
@@ -408,10 +408,7 @@ export default function MarkdownPortfolioPage() {
                 <H2>Education</H2>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>
-                    <span className="text-accent">-</span> <InlineStrong>Master of Computer Applications</InlineStrong> — JNU, Jaipur
-                  </li>
-                  <li>
-                    <span className="text-accent">-</span> <InlineStrong>Bachelor of Computer Applications</InlineStrong> — IGNOU
+                    <span className="text-accent">-</span> <InlineStrong>Master of Computer Applications</InlineStrong>
                   </li>
                   <li>
                     <span className="text-accent">-</span> <InlineStrong>Languages:</InlineStrong> English · Hindi
@@ -429,12 +426,12 @@ export default function MarkdownPortfolioPage() {
                 <div className="rounded-lg border border-border bg-background/50 p-5">
                   <p className="mb-4 text-sm text-muted-foreground">Let&apos;s build better systems.</p>
                   <div className="flex flex-wrap gap-2">
-                    <ActionLink href="mailto:sanchetanparmar@yahoo.com">sanchetanparmar@yahoo.com</ActionLink>
+                    <ActionLink href="mailto:sanchetanparmar@yahoo.com">Email</ActionLink>
                     <ActionLink href="https://www.linkedin.com/in/sanjayp5/" external>
-                      linkedin.com/in/sanjayp5
+                      LinkedIn
                     </ActionLink>
                     <ActionLink href="https://github.com/sanchetanparmar" external>
-                      github.com/sanchetanparmar
+                      GitHub
                     </ActionLink>
                   </div>
                 </div>

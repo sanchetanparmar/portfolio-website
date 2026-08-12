@@ -26,7 +26,7 @@ From infrastructure as code to container orchestration and automated delivery, I
 
 ### Lead DevOps Engineer
 
-`Jan 2024 – Present`
+`2023 – Present`
 
 - Lead end-to-end DevOps strategy for an InsurTech platform spanning cloud infrastructure, CI/CD, and production support.
 - Architected serverless AWS workflows with Lambda, Step Functions, and API Gateway to speed delivery and cut operational overhead.
@@ -36,7 +36,7 @@ From infrastructure as code to container orchestration and automated delivery, I
 
 ### DevOps / SRE / Cloud Architect
 
-`Oct 2018 – Dec 2023`
+`2018 – 2022`
 
 - Designed enterprise AWS infrastructure for FinTech platforms supporting 100k+ concurrent connections.
 - Built DevOps and SRE practices from scratch while delivering PCI-DSS and SOC 2 compliance.
@@ -46,7 +46,7 @@ From infrastructure as code to container orchestration and automated delivery, I
 
 ### DevSecOps Engineer
 
-`Mar 2018 – Sep 2018`
+`2018`
 
 - Implemented centralized authentication with FreeIPA / Red Hat IDM integrated into Git and Jenkins.
 - Delivered CIS benchmark hardening and SIEM coverage on AWS.
@@ -208,8 +208,7 @@ Turned approved changes into consistent environments across AWS and Kubernetes w
 
 ## Education
 
-- **Master of Computer Applications** — JNU, Jaipur
-- **Bachelor of Computer Applications** — IGNOU
+- **Master of Computer Applications**
 - **Languages:** English · Hindi
 - **Working style:** Curious · analytical · collaborative
 

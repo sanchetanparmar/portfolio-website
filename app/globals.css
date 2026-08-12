@@ -126,3 +126,121 @@
     @apply bg-background text-foreground;
   }
 }
+
+.blog-prose {
+  @apply text-[15px] leading-7 text-muted-foreground;
+}
+
+.blog-prose h2 {
+  @apply mb-3 mt-10 text-2xl font-semibold tracking-tight text-foreground;
+}
+
+.blog-prose h3 {
+  @apply mb-2 mt-8 text-lg font-semibold text-foreground;
+}
+
+.blog-prose p {
+  @apply mb-4;
+}
+
+.blog-prose ul {
+  @apply mb-4 list-disc space-y-2 pl-5;
+}
+
+.blog-prose ol {
+  @apply mb-4 list-decimal space-y-2 pl-5;
+}
+
+.blog-prose li {
+  @apply leading-7;
+}
+
+.blog-prose strong {
+  @apply font-semibold text-foreground;
+}
+
+.blog-prose a {
+  @apply text-primary underline-offset-2 hover:underline;
+}
+
+.blog-prose code {
+  @apply rounded bg-secondary/70 px-1.5 py-0.5 font-mono text-[12px] text-primary;
+}
+
+.blog-prose pre {
+  @apply mb-4 overflow-x-auto rounded-lg border border-border bg-card/60 p-4 font-mono text-[12px] text-foreground;
+}
+
+.blog-prose pre code {
+  @apply bg-transparent p-0 text-foreground;
+}
+
+@keyframes hero-orbit-spin {
+  from {
+    transform: rotate(var(--orbit-angle)) translateX(138px) rotate(calc(-1 * var(--orbit-angle)));
+  }
+  to {
+    transform: rotate(calc(var(--orbit-angle) + 360deg)) translateX(138px) rotate(calc(-1 * (var(--orbit-angle) + 360deg)));
+  }
+}
+
+@keyframes hero-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.2;
+  }
+}
+
+@keyframes hero-cursor-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  55%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.hero-orbit {
+  transform: rotate(var(--orbit-angle)) translateX(138px) rotate(calc(-1 * var(--orbit-angle)));
+  animation: hero-orbit-spin 36s linear infinite;
+}
+
+.hero-orbit-item {
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.hero-orbit:hover .hero-orbit-item {
+  color: var(--primary);
+  border-color: color-mix(in oklab, var(--primary) 55%, transparent);
+}
+
+.hero-pulse {
+  animation: hero-pulse 3.2s ease-in-out infinite;
+}
+
+.hero-pulse-delay {
+  animation: hero-pulse 3.2s ease-in-out infinite 0.7s;
+}
+
+.hero-cursor {
+  animation: hero-cursor-blink 1s steps(1) infinite;
+  color: var(--primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-orbit,
+  .hero-pulse,
+  .hero-pulse-delay,
+  .hero-cursor {
+    animation: none !important;
+  }
+}
+
+
